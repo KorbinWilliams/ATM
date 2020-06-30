@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
-using Keepr.Repositories;
-using Keepr.Services;
+using ATM.Repositories;
+using ATM.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -17,7 +17,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using MySql.Data.MySqlClient;
 
-namespace Keepr
+namespace ATM
 {
   public class Startup
   {
@@ -61,8 +61,8 @@ namespace Keepr
       services.AddScoped<IDbConnection>(x => CreateDbConnection());
 
       //NOTE REGISTER SERVICES AND REPOSITORIES
-      services.AddTransient<ItemsService>();
-      services.AddTransient<ItemsRepository>();
+      services.AddTransient<CardsService>();
+      services.AddTransient<CardsRepository>();
     }
 
     private IDbConnection CreateDbConnection()

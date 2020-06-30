@@ -3,30 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using Keepr.Models;
-using Keepr.Services;
+using ATM.Models;
+using ATM.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace Keepr.Controllers
+namespace ATM.Controllers
 {
   [ApiController]
   [Route("api/[controller]")]
-  public class ItemsController : ControllerBase
+  public class CardsController : ControllerBase
   {
-    private readonly ItemsService _its;
-    public ItemsController(ItemsService its)
+    private readonly CardsService _cs;
+    public CardsController(CardsService cs)
     {
-      _its = its;
+      _cs = cs;
     }
     [HttpGet]
-    public ActionResult<IEnumerable<Item>> Get()
+    public ActionResult<IEnumerable<Card>> Get()
     {
       try
       {
         // var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
-        return Ok(_its.Get());
+        return Ok(_cs.Get());
       }
       catch (Exception e)
       {
@@ -36,12 +36,12 @@ namespace Keepr.Controllers
 
     [HttpGet("mine")]
     [Authorize]
-    public ActionResult<IEnumerable<Item>> GetMyItems()
+    public ActionResult<IEnumerable<Card>> GetMyCards()
     {
       try
       {
         var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
-        return Ok(_its.GetMyItems(userId));
+        return Ok(_cs.GetMyCards(userId));
       }
       catch (Exception e)
       {
@@ -52,11 +52,11 @@ namespace Keepr.Controllers
     // Probably gonna need a get all for users private Items
 
     [HttpGet("{id}")]
-    public ActionResult<Item> Get(int id)
+    public ActionResult<Card> Get(int id)
     {
       try
       {
-        return Ok(_its.GetById(id));
+        return Ok(_cs.GetById(id));
       }
       catch (Exception e)
       {
@@ -66,13 +66,13 @@ namespace Keepr.Controllers
 
     [HttpPost]
     [Authorize]
-    public ActionResult<Item> Post([FromBody] Item newItem)
+    public ActionResult<Card> Post([FromBody] Card newCard)
     {
       try
       {
         var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
-        newItem.UserId = userId;
-        return Ok(_its.Create(newItem));
+        newCard.UserId = userId;
+        return Ok(_cs.Create(newCard));
       }
       catch (Exception e)
       {
@@ -82,13 +82,13 @@ namespace Keepr.Controllers
 
     [HttpPut("{id}")]
     [Authorize]
-    public ActionResult<Item> Put([FromBody] Item update)
+    public ActionResult<Card> Put([FromBody] Card update)
     {
       try
       {
         var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
         update.UserId = userId;
-        return Ok(_its.Edit(update));
+        return Ok(_cs.Edit(update));
       }
       catch (Exception e)
       {
@@ -103,7 +103,7 @@ namespace Keepr.Controllers
       try
       {
         var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
-        return Ok(_its.Delete(id, userId));
+        return Ok(_cs.Delete(id, userId));
       }
       catch (Exception e)
       {
