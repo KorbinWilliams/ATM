@@ -63,6 +63,8 @@ namespace ATM
       //NOTE REGISTER SERVICES AND REPOSITORIES
       services.AddTransient<CardsService>();
       services.AddTransient<CardsRepository>();
+      services.AddTransient<CashService>();
+      services.AddTransient<CashRepository>();
     }
 
     private IDbConnection CreateDbConnection()

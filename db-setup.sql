@@ -1,7 +1,7 @@
 USE thekeeper;
 
 
-CREATE TABLE keeps (
+CREATE TABLE cards (
     id int NOT NULL AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
     description VARCHAR(255) NOT NULL,
@@ -21,8 +21,6 @@ CREATE TABLE keeps (
 -- SELECT k.* FROM vaultkeeps vk
 -- INNER JOIN keeps k ON k.id = vk.keepId 
 -- WHERE (vaultId = @vaultId AND vk.userId = @userId) 
-
-
 
 -- -- USE THIS TO CLEAN OUT YOUR DATABASE
 -- DROP TABLE IF EXISTS vaultkeeps;
