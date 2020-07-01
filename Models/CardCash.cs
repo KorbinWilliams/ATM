@@ -1,4 +1,4 @@
-namespace ATM.models
+namespace ATM.Models
 {
   public class CardCash
   {

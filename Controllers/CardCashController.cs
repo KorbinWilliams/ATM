@@ -30,7 +30,7 @@ namespace ATM.Controllers
       try
       {
         var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
-        Card card = _cs.GetById(cardId, userId);
+        Card card = _cs.GetById(cardId);
         return Ok(_ccs.GetCashByCardId(card));
       }
       catch (Exception e)
@@ -62,7 +62,7 @@ namespace ATM.Controllers
     {
       try
       {
-        // getting 415 maybe drop tables?
+        // 415
         var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
         return Ok(_ccs.Delete(cardId, cashId, userId));
       }
