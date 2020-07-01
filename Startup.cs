@@ -65,6 +65,8 @@ namespace ATM
       services.AddTransient<CardsRepository>();
       services.AddTransient<CashService>();
       services.AddTransient<CashRepository>();
+      services.AddTransient<CardCashService>();
+      services.AddTransient<CardCashRepository>();
     }
 
     private IDbConnection CreateDbConnection()
