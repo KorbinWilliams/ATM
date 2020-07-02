@@ -25,7 +25,7 @@ namespace ATM.Controllers
 
     [HttpGet("{vaultId}/cash")]
     [Authorize]
-    public ActionResult<IEnumerable<Cash>> GetCashsByCardId(int cardId)
+    public ActionResult<IEnumerable<Cash>> GetCashByCardId(int cardId)
     {
       try
       {

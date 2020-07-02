@@ -6,7 +6,7 @@ namespace ATM.Models
     { }
     public int Id { get; set; }
     public int CardId { get; set; }
-    public int Cash { get; set; }
+    public int CashId { get; set; }
     public string UserId { get; set; }
   }
 }
