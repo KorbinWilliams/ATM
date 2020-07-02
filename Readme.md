@@ -4,5 +4,7 @@ A project focused on recreating an ATM using different cards and cash. Uses Vuej
 
 ## Wire-frame and Back-end flowchart
 
+wire-frame
 ![Wire-frame](wwwsrc\src\assets\ATM.png)
-![Flow-chart] (wwwsrc\src\assets\ATM backend architectural flowchart.png)
+flow-chart
+![Flow-chart](wwwsrc\src\assets\ATM backend architectural flowchart.png)
