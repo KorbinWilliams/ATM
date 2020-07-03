@@ -23,21 +23,21 @@ namespace ATM.Controllers
       _cs = cs;
     }
 
-    [HttpGet("{vaultId}/cash")]
-    [Authorize]
-    public ActionResult<IEnumerable<Cash>> GetCashByCardId(int cardId)
-    {
-      try
-      {
-        var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
-        Card card = _cs.GetById(cardId);
-        return Ok(_ccs.GetCashByCardId(card));
-      }
-      catch (Exception e)
-      {
-        return BadRequest(e.Message);
-      }
-    }
+    // [HttpGet("{vaultId}/cash")]
+    // [Authorize]
+    // public ActionResult<IEnumerable<Cash>> GetCashByCardId(int cardId)
+    // {
+    //   try
+    //   {
+    //     var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+    //     Card card = _cs.GetById(cardId);
+    //     return Ok(_ccs.GetCashByCardId(card));
+    //   }
+    //   catch (Exception e)
+    //   {
+    //     return BadRequest(e.Message);
+    //   }
+    // }
 
     [HttpPost]
     [Authorize]

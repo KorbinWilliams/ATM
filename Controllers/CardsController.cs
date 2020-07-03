@@ -16,10 +16,13 @@ namespace ATM.Controllers
   public class CardsController : ControllerBase
   {
     private readonly CardsService _cs;
-    public CardsController(CardsService cs)
+    private readonly CardCashService _ccs;
+    public CardsController(CardsService cs, CardCashService ccs)
     {
       _cs = cs;
+      _ccs = ccs;
     }
+
     [HttpGet]
     public ActionResult<IEnumerable<Card>> Get()
     {
@@ -32,6 +35,27 @@ namespace ATM.Controllers
       {
         return BadRequest(e.Message);
       };
+    }
+
+    // TODO pin and # verification
+    // TODO Withdrawl verification (CardCashService)
+    // TODO Card creation number check and create cardcash table
+    // TODO Deposit cash check/change (CardCashService)
+    // TODO custom errors
+
+    [HttpGet("verify/{id}/{pin}")]
+    [Authorize]
+    public ActionResult<bool> VerifyCredentials(int id, int pin)
+    {
+      try
+      {
+        var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+        return Ok(_ccs.VerifyCredentials(id, pin, userId));
+      }
+      catch (Exception e)
+      {
+        return BadRequest(e.Message);
+      }
     }
 
     [HttpGet("mine")]

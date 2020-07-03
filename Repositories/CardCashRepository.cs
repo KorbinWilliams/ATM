@@ -40,12 +40,20 @@ namespace ATM.Repositories
     }
 
     // NOTE Changed @userId to @UserId and @id to @Id
-    internal IEnumerable<Cash> GetCashByCardId(Card card)
+    // internal Cash GetCashByCardId(Card card)
+    // {
+    //   string sql = @"SELECT c.* FROM cardcash cc
+    //     INNER JOIN cash c ON c.id = cc.cashId
+    //     WHERE (cardId = @Id AND cc.userId = @UserId)";
+    //   return _db.QuerySingleOrDefault<Cash>(sql, card);
+    // }
+
+    internal Cash GetCashByCardId(int id)
     {
       string sql = @"SELECT c.* FROM cardcash cc
-        INNER JOIN cash c ON c.id = cc.cashId
-        WHERE (cardId = @Id AND cc.userId = @UserId)";
-      return _db.Query<Cash>(sql, card);
+       INNER JOIN cash c ON c.id = cc.cardId
+       WHERE(cardId = @cardId AND cc.userId = @userId)";
+      return _db.QuerySingleOrDefault<Cash>(sql, id);
     }
 
     internal void Delete(int id)
