@@ -28,6 +28,7 @@ namespace ATM.Controllers
     {
       try
       {
+        // NOTE this should be user specific right?
         // var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
         return Ok(_cs.Get());
       }
@@ -42,6 +43,7 @@ namespace ATM.Controllers
     // TODO Card creation number check and create cardcash table
     // TODO Deposit cash check/change (CardCashService)
     // TODO custom errors
+    // TODO Sanitize user inputs
 
     [HttpGet("verify/{id}/{pin}")]
     [Authorize]

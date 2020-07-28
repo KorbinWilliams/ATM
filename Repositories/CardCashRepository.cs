@@ -49,10 +49,11 @@ namespace ATM.Repositories
     // }
 
     internal Cash GetCashByCardId(int id)
+    // TODO This'll probably need reworking. I should pass in the whole card not just the id.
     {
       string sql = @"SELECT c.* FROM cardcash cc
        INNER JOIN cash c ON c.id = cc.cardId
-       WHERE(cardId = @cardId AND cc.userId = @userId)";
+       WHERE(cardId = @Id AND cc.userId = @userId)";
       return _db.QuerySingleOrDefault<Cash>(sql, id);
     }
 

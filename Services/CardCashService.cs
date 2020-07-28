@@ -74,9 +74,9 @@ namespace ATM.Services
       {
         throw new Exception("You do not own the account associated with this card.");
       }
-      else if (card.Pin == 0 || card.Pin != pin)
+      else if (card.Pin.ToString().Length < 4 || card.Pin != pin)
       {
-        throw new Exception("Incorrect information. Please try again.");
+        throw new Exception("Incorrect pin number. Please try again.");
       }
       return true;
     }
