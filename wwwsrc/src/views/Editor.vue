@@ -9,6 +9,7 @@
 </template>
 
 <script>
+// TODO Make an editor that displays current cards. Clicking on a card displays that card information on the right card picture and on the bottom left display. The editor component has the card picture as well as a singular edit form.
 export default {
   name: "editor"
 };

@@ -10,6 +10,8 @@
 </template>
 
 <script>
+// TODO Make an about page that describes the overall project idea and has how-to instructions.
+// NOTE make only information box scrollable.
 export default {
   name: "about"
 };
