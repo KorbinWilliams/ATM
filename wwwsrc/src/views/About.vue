@@ -5,7 +5,7 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <menu />
+        <routesmenu />
       </div>
     </div>
   </div>
@@ -14,11 +14,11 @@
 <script>
 // TODO Make an about page that describes the overall project idea and has how-to instructions.
 // NOTE make only information box scrollable.
-import menu from "../components/Menu";
+import routesmenu from "../components/RoutesMenu";
 export default {
   name: "about",
   components: {
-    menu,
+    routesmenu,
   },
 };
 </script>
