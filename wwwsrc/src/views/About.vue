@@ -1,10 +1,26 @@
 <template>
   <div class="about container-fluid">
     <div class="row">
-      <div class="col-8 offset-2">about info</div>
+      <div class="col-10 offset-1 infoBox">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center">
+            <h1>About</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <h5>ATM: The atm is based on real atms, and if you need help figuring out how to use it, ask your local bank.</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <h5>Editor: To use the editor, first select a card or click create a card. Click on the part of the card you would like to edit on the picture and enter your desired changes. Press apply when you're done.</h5>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 menuBox">
         <routesmenu />
       </div>
     </div>
@@ -24,4 +40,12 @@ export default {
 </script>
 
 <style>
+.infoBox {
+  color: greenyellow;
+  background-color: black;
+  border: 2px solid black;
+  height: 50vh;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
 </style>

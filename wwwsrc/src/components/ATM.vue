@@ -7,6 +7,7 @@
 </template>
 
 <script>
+// TODO make image and coordinates responsive.
 export default {
   name: "atm",
 };
@@ -15,5 +16,6 @@ export default {
 <style>
 .atmImage {
   width: 100%;
+  height: 80vh;
 }
 </style>
