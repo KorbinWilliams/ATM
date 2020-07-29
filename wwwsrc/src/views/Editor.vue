@@ -1,17 +1,26 @@
 <template>
   <div class="editor row">
-    <div class="col-3 offset-1">
-      <div class="row">card-selector</div>
-      <div class="row">card-info?</div>
+    <div class="col-12">
+      <div class="row">
+        <div class="col-3 offset-1">
+          <div class="row">card-selector</div>
+          <div class="row">card-info?</div>
+        </div>
+        <div class="col-7 offset-1">card editor/creator</div>
+      </div>
+      <menu />
     </div>
-    <div class="col-7 offset-1">card editor/creator</div>
   </div>
 </template>
 
 <script>
 // TODO Make an editor that displays current cards. Clicking on a card displays that card information on the right card picture and on the bottom left display. The editor component has the card picture as well as a singular edit form.
+import menu from "../components/Menu";
 export default {
-  name: "editor"
+  name: "editor",
+  components: {
+    menu,
+  },
 };
 </script>
 
