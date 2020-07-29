@@ -1,14 +1,16 @@
 <template>
-  <div class="editor row">
-    <div class="col-12">
-      <div class="row">
-        <div class="col-3 offset-1">
-          <div class="row">card-selector</div>
-          <div class="row">card-info?</div>
+  <div class="editor container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-3 offset-1">
+            <div class="row">card-selector</div>
+            <div class="row">card-info?</div>
+          </div>
+          <div class="col-7 offset-1">card editor/creator</div>
         </div>
-        <div class="col-7 offset-1">card editor/creator</div>
+        <routesmenu />
       </div>
-      <routesmenu />
     </div>
   </div>
 </template>

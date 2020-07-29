@@ -1,17 +1,7 @@
 <template>
   <div class="atm row">
     <div class="col">
-      <div class="row">
-        <div class="col-6">Screen</div>
-        <div class="col-2">action buttons</div>
-        <div class="col-4">deposit and withdraw</div>
-      </div>
-      <div class="row">
-        <div class="col-4 offset-1">keypad</div>
-        <div class="col-2">accept/yes button</div>
-        <div class="col-2">decline/no button</div>
-        <!-- <div class="col-3">filler</div> -->
-      </div>
+      <img class="atmImage" src="https://i.imgur.com/Co0p1ef.png?1" alt />
     </div>
   </div>
 </template>
@@ -23,4 +13,7 @@ export default {
 </script>
 
 <style>
+.atmImage {
+  width: 100%;
+}
 </style>
