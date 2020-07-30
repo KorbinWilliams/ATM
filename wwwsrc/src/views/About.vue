@@ -21,7 +21,7 @@
     </div>
     <div class="row bottom">
       <div class="col-12 menuBox">
-        <routesmenu />
+        <routesmenu class="ht-100" />
       </div>
     </div>
   </div>
@@ -47,5 +47,8 @@ export default {
   height: 50vh;
   margin-top: 10vh;
   margin-bottom: 10vh;
+}
+.about {
+  background-color: black;
 }
 </style>

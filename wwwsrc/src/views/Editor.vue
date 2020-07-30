@@ -1,21 +1,19 @@
 <template>
-  <div class="editor">
-    <div class="container-fluid">
-      <div class="row top align-items-center">
-        <div class="col-12 col-md-6">
-          <div class="row justify-content-around">
-            <div class="box col-4 col-md-8">
-              <cardselector />
-            </div>
-            <div class="box col-4 col-md-8 offset-md-0">card-info?</div>
+  <div class="editor container-fluid">
+    <div class="row top align-items-center">
+      <div class="col-12 col-md-6">
+        <div class="row justify-content-around">
+          <div class="box col-4 col-md-8">
+            <cardselector />
           </div>
-        </div>
-        <div class="col-10 offset-2 col-md-6 offset-md-0">
-          <editorbox />
+          <div class="box col-4 col-md-8 offset-md-0">card-info?</div>
         </div>
       </div>
-      <routesmenu class="menuBox bottom" />
+      <div class="col-10 offset-2 col-md-6 offset-md-0">
+        <editorbox />
+      </div>
     </div>
+    <routesmenu class="menuBox bottom" />
   </div>
 </template>
 
@@ -35,6 +33,9 @@ export default {
 </script>
 
 <style>
+.editor {
+  background-color: lightblue;
+}
 .top {
   height: 93vh;
 }

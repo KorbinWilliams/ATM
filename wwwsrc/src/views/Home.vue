@@ -10,7 +10,7 @@
     </div>
     <div class="row bottom">
       <div class="col-12 menuBox">
-        <routesmenu />
+        <routesmenu class="ht-100" />
       </div>
     </div>
   </div>
@@ -43,7 +43,13 @@ export default {
 </script>
 
 <style>
+.home {
+  background-image: url(https://images-na.ssl-images-amazon.com/images/I/81p05eM68hL._AC_SY355_.jpg);
+}
 .menuBox {
   border: 2px solid black;
+}
+.ht-100 {
+  height: 100%;
 }
 </style>
