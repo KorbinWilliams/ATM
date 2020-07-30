@@ -1,7 +1,7 @@
 <template>
   <div class="atm row">
-    <div class="col">
-      <img class="atmImage" src="https://i.imgur.com/Co0p1ef.png?1" alt />
+    <div class="col-12">
+      <img class="atmImage" src="https://i.imgur.com/Co0p1ef.png?1" alt="atm" />
     </div>
   </div>
 </template>
@@ -16,6 +16,6 @@ export default {
 <style>
 .atmImage {
   width: 100%;
-  height: 80vh;
+  height: 80%;
 }
 </style>

@@ -14,13 +14,10 @@ export default {
 <style>
 .cardImage {
   border: 2px solid black;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
   height: 20vh;
 }
 .editBox {
   border: 2px solid black;
-  margin-bottom: 5vh;
   height: 20vh;
 }
 </style>

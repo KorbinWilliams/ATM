@@ -1,16 +1,16 @@
 <template>
-  <div class="menu row">
-    <div class="col-3 offset-2">
+  <div class="routesmenu row justify-content-around">
+    <div class="col-3 d-flex justify-content-center">
       <router-link to="/" class="links">
         <button class="btn">ATM</button>
       </router-link>
     </div>
-    <div class="col-3">
+    <div class="col-3 d-flex justify-content-center">
       <router-link to="/editor" class="links">
         <button class="btn">Editor</button>
       </router-link>
     </div>
-    <div class="col-3">
+    <div class="col-3 d-flex justify-content-center">
       <router-link to="/about" class="links">
         <button class="btn">About</button>
       </router-link>

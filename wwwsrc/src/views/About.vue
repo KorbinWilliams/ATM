@@ -1,6 +1,6 @@
 <template>
   <div class="about container-fluid">
-    <div class="row">
+    <div class="row top align-items-center">
       <div class="col-10 offset-1 infoBox">
         <div class="row">
           <div class="col-12 d-flex justify-content-center">
@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row bottom">
       <div class="col-12 menuBox">
         <routesmenu />
       </div>
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-// TODO Make an about page that describes the overall project idea and has how-to instructions.
+// TODO Make an about page that describes the overall project idea and has how-to instructions. Background-color-black?
 // NOTE make only information box scrollable.
 import routesmenu from "../components/RoutesMenu";
 export default {

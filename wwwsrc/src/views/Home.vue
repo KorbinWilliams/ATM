@@ -1,6 +1,6 @@
 <template>
   <div class="home container-fluid">
-    <div class="row">
+    <div class="row top">
       <div class="col-12">
         <cardselector />
       </div>
@@ -8,7 +8,7 @@
         <atm />
       </div>
     </div>
-    <div class="row">
+    <div class="row bottom">
       <div class="col-12 menuBox">
         <routesmenu />
       </div>
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-// TODO The home page contains most of the ATM's controller-like functions that interact with the back-end. Contains a similar if not same card selector as the editor.
+// TODO The home page contains most of the ATM's controller-like functions that interact with the back-end. Contains a similar if not same card selector as the editor. Background-image-bricks.
 import cardselector from "../components/CardSelector";
 import atm from "../components/ATM";
 import routesmenu from "../components/RoutesMenu";
@@ -45,6 +45,5 @@ export default {
 <style>
 .menuBox {
   border: 2px solid black;
-  width: 80%;
 }
 </style>
